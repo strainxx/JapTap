@@ -1,5 +1,6 @@
 import re
 import requests
+import random
 from datetime import datetime, timezone
 import asyncio
 import aiohttp
@@ -109,8 +110,8 @@ async def main():
                 taps_count = 1
                 delay = 1.0
             else:
-                taps_count = 7
-                delay = 0.1
+                taps_count = random.randint(5, 7)
+                delay = round(random.uniform(0.1, 0.5), 2)
             
             status_code = await perform_tap(taps_count)
             
