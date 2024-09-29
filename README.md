@@ -1,0 +1,2 @@
+# JapTap
+Clicker for JapTap
